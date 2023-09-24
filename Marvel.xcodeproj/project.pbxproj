@@ -35,6 +35,7 @@
 		83BAB5FC2AC0465A00B3A53C /* MarvelCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5FB2AC0465A00B3A53C /* MarvelCharactersViewModel.swift */; };
 		83BAB6012AC0519E00B3A53C /* MarvelCharacterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5FF2AC0519E00B3A53C /* MarvelCharacterTableCell.swift */; };
 		83BAB6022AC0519E00B3A53C /* MarvelCharacterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BAB6002AC0519E00B3A53C /* MarvelCharacterTableCell.xib */; };
+		83BAB6052AC0539200B3A53C /* MarvelCharacter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BAB6042AC0539200B3A53C /* MarvelCharacter.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		83BAB5FB2AC0465A00B3A53C /* MarvelCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersViewModel.swift; sourceTree = "<group>"; };
 		83BAB5FF2AC0519E00B3A53C /* MarvelCharacterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterTableCell.swift; sourceTree = "<group>"; };
 		83BAB6002AC0519E00B3A53C /* MarvelCharacterTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarvelCharacterTableCell.xib; sourceTree = "<group>"; };
+		83BAB6042AC0539200B3A53C /* MarvelCharacter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarvelCharacter.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			children = (
 				83BAB5FF2AC0519E00B3A53C /* MarvelCharacterTableCell.swift */,
 				83BAB6002AC0519E00B3A53C /* MarvelCharacterTableCell.xib */,
+				83BAB6042AC0539200B3A53C /* MarvelCharacter.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				83627CF42AC01A2100359317 /* LaunchScreen.storyboard in Resources */,
 				83BAB6022AC0519E00B3A53C /* MarvelCharacterTableCell.xib in Resources */,
 				83627CF12AC01A2100359317 /* Assets.xcassets in Resources */,
+				83BAB6052AC0539200B3A53C /* MarvelCharacter.storyboard in Resources */,
 				83627CEF2AC01A2000359317 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
