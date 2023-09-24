@@ -47,6 +47,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		831E71922AC01D150046142D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				83627CE72AC01A2000359317 /* AppDelegate.swift */,
+				83627CE92AC01A2000359317 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		831E71932AC01D220046142D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				83627CEB2AC01A2000359317 /* ViewController.swift */,
+				83627CED2AC01A2000359317 /* Main.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		831E71942AC01D2B0046142D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		831E71952AC01D420046142D /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		831E71962AC01D550046142D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				83627CF02AC01A2100359317 /* Assets.xcassets */,
+				83627CF52AC01A2100359317 /* Info.plist */,
+				83627CF22AC01A2100359317 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		83627CDB2AC01A2000359317 = {
 			isa = PBXGroup;
 			children = (
@@ -66,13 +108,11 @@
 		83627CE62AC01A2000359317 /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
-				83627CE72AC01A2000359317 /* AppDelegate.swift */,
-				83627CE92AC01A2000359317 /* SceneDelegate.swift */,
-				83627CEB2AC01A2000359317 /* ViewController.swift */,
-				83627CED2AC01A2000359317 /* Main.storyboard */,
-				83627CF02AC01A2100359317 /* Assets.xcassets */,
-				83627CF22AC01A2100359317 /* LaunchScreen.storyboard */,
-				83627CF52AC01A2100359317 /* Info.plist */,
+				831E71922AC01D150046142D /* Application */,
+				831E71932AC01D220046142D /* Scenes */,
+				831E71942AC01D2B0046142D /* Common */,
+				831E71952AC01D420046142D /* Infrastructure */,
+				831E71962AC01D550046142D /* Resources */,
 			);
 			path = Marvel;
 			sourceTree = "<group>";
@@ -316,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Marvel/Info.plist;
+				INFOPLIST_FILE = Marvel/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,7 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Marvel/Info.plist;
+				INFOPLIST_FILE = Marvel/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
