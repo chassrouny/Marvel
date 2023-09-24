@@ -47,8 +47,10 @@ class MarvelCharatersViewModel {
                         let mappedItems = mapDTOtoCharacters(array: items)
                         if offset == 0 {
                             marvelCharacters.removeAll()
-                            //Delete old Items from Cache
-                            //Save Items to Cache
+//                            DispatchQueue.main.async {
+//                                self.repository.deleteCharactersFromCache()
+//                                self.repository.saveCharactersInCache(characters: mappedObjets)
+//                            }
                         }
                         marvelCharacters.append(contentsOf: mappedItems)
                     }

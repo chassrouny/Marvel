@@ -9,6 +9,7 @@ import Foundation
 
 class MarvelCharactersRepository {
     private let networkManager = NetworkManager.shared
+    private let realmManager = RealmManager.shared
     
     func getCharacters(offset: Int, limit: Int = 20) async -> MarvelResponse<MarvelCharacterDTO>? {
         do {
@@ -20,5 +21,20 @@ class MarvelCharactersRepository {
             print(error.localizedDescription)
             return nil
         }
+    }
+    
+    func getCharactersFromCache() -> [MarvelCharacter]? {
+        if let results = realmManager.getAll(MarvelCharacter.self), results.count > 0 {
+            return results
+        }
+        return nil
+    }
+    
+    func saveCharactersInCache(characters: [MarvelCharacter]) {
+        realmManager.save(objects: characters)
+    }
+    
+    func deleteCharactersFromCache() {
+        realmManager.deleteAll()
     }
 }
