@@ -37,6 +37,8 @@
 		83BAB6072AC053E400B3A53C /* MarvelCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB6062AC053E400B3A53C /* MarvelCharactersViewController.swift */; };
 		83BAB60A2AC0541700B3A53C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB6092AC0541700B3A53C /* BaseViewController.swift */; };
 		83BAB60C2AC0797F00B3A53C /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB60B2AC0797F00B3A53C /* ActivityIndicator.swift */; };
+		83BAB60F2AC07A1D00B3A53C /* LoadMoreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB60D2AC07A1D00B3A53C /* LoadMoreTableCell.swift */; };
+		83BAB6102AC07A1D00B3A53C /* LoadMoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BAB60E2AC07A1D00B3A53C /* LoadMoreTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		83BAB6062AC053E400B3A53C /* MarvelCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersViewController.swift; sourceTree = "<group>"; };
 		83BAB6092AC0541700B3A53C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		83BAB60B2AC0797F00B3A53C /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		83BAB60D2AC07A1D00B3A53C /* LoadMoreTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreTableCell.swift; sourceTree = "<group>"; };
+		83BAB60E2AC07A1D00B3A53C /* LoadMoreTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +286,8 @@
 			children = (
 				83BAB6092AC0541700B3A53C /* BaseViewController.swift */,
 				83BAB60B2AC0797F00B3A53C /* ActivityIndicator.swift */,
+				83BAB60D2AC07A1D00B3A53C /* LoadMoreTableCell.swift */,
+				83BAB60E2AC07A1D00B3A53C /* LoadMoreTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				83BAB6022AC0519E00B3A53C /* MarvelCharacterTableCell.xib in Resources */,
 				83627CF12AC01A2100359317 /* Assets.xcassets in Resources */,
 				83BAB6052AC0539200B3A53C /* MarvelCharacters.storyboard in Resources */,
+				83BAB6102AC07A1D00B3A53C /* LoadMoreTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +399,7 @@
 				83BAB5D12AC01F8100B3A53C /* APIConfiguration.swift in Sources */,
 				83BAB5EE2AC03FEB00B3A53C /* ThumbnailDTO.swift in Sources */,
 				83627CEA2AC01A2000359317 /* SceneDelegate.swift in Sources */,
+				83BAB60F2AC07A1D00B3A53C /* LoadMoreTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
