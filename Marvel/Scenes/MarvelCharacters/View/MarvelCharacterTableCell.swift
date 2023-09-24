@@ -18,13 +18,13 @@ class MarvelCharacterTableCell: UITableViewCell {
         // Initialization code
         
         titleLbl.textColor = .black
-        titleLbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        titleLbl.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         thumbnailImgView.contentMode = .scaleAspectFit
     }
     
     func setup(title: String?, thumbnailUrl: String?) {
         thumbnailImgView.image = nil
-        titleLbl.text = nil
+        titleLbl.text = title
         
         thumbnailImgView.kf.indicatorType = .activity
         if let thumbnailUrl {

@@ -16,10 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YiM-Rr-Gix">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YiM-Rr-Gix" secondAttribute="bottom" id="St2-bF-jUv"/>
+                            <constraint firstItem="YiM-Rr-Gix" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hO6-uq-uQ3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YiM-Rr-Gix" secondAttribute="trailing" id="nWZ-NM-Xa4"/>
+                            <constraint firstItem="YiM-Rr-Gix" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tc9-ea-KZ0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NCv-3J-IER"/>
+                    <connections>
+                        <outlet property="marvelCharactersTableView" destination="YiM-Rr-Gix" id="u9b-3h-qEP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
