@@ -22,6 +22,9 @@
 		83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */; };
 		83BAB5D72AC020A200B3A53C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D62AC020A200B3A53C /* StringExtension.swift */; };
 		83BAB5D92AC020E100B3A53C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D82AC020E100B3A53C /* DateExtension.swift */; };
+		83BAB5DC2AC03B9700B3A53C /* MarvelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5DB2AC03B9700B3A53C /* MarvelResponse.swift */; };
+		83BAB5DE2AC03BAF00B3A53C /* MarvelResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5DD2AC03BAF00B3A53C /* MarvelResponseData.swift */; };
+		83BAB5E02AC03BD100B3A53C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5DF2AC03BD100B3A53C /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		83BAB5D62AC020A200B3A53C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		83BAB5D82AC020E100B3A53C /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		83BAB5DB2AC03B9700B3A53C /* MarvelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelResponse.swift; sourceTree = "<group>"; };
+		83BAB5DD2AC03BAF00B3A53C /* MarvelResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelResponseData.swift; sourceTree = "<group>"; };
+		83BAB5DF2AC03BD100B3A53C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		831E71952AC01D420046142D /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				83BAB5DA2AC03B8000B3A53C /* Base */,
 				83BAB5D22AC0201800B3A53C /* Network */,
 			);
 			path = Infrastructure;
@@ -132,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */,
+				83BAB5DF2AC03BD100B3A53C /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -143,6 +151,15 @@
 				83BAB5D82AC020E100B3A53C /* DateExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		83BAB5DA2AC03B8000B3A53C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				83BAB5DB2AC03B9700B3A53C /* MarvelResponse.swift */,
+				83BAB5DD2AC03BAF00B3A53C /* MarvelResponseData.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +248,12 @@
 			files = (
 				83627CEC2AC01A2000359317 /* ViewController.swift in Sources */,
 				83BAB5D92AC020E100B3A53C /* DateExtension.swift in Sources */,
+				83BAB5E02AC03BD100B3A53C /* NetworkManager.swift in Sources */,
 				83627CE82AC01A2000359317 /* AppDelegate.swift in Sources */,
+				83BAB5DE2AC03BAF00B3A53C /* MarvelResponseData.swift in Sources */,
 				83BAB5D72AC020A200B3A53C /* StringExtension.swift in Sources */,
 				83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */,
+				83BAB5DC2AC03B9700B3A53C /* MarvelResponse.swift in Sources */,
 				83BAB5D12AC01F8100B3A53C /* APIKeys.swift in Sources */,
 				83627CEA2AC01A2000359317 /* SceneDelegate.swift in Sources */,
 			);
