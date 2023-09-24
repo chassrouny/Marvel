@@ -22,3 +22,16 @@ struct MarvelCharacterDTO: Decodable {
         case thumbnail = "thumbnail"
     }
 }
+
+extension MarvelCharacterDTO {
+    func toDomain() -> MarvelCharacter {
+        let marvelCharacter = MarvelCharacter()
+        marvelCharacter.id = id
+        marvelCharacter.name = name
+        var thumb = Thumbnail()
+        thumb.path = thumbnail?.path
+        thumb.extension = thumbnail?.extension
+        marvelCharacter.thumbnail = thumb
+        return marvelCharacter
+    }
+}
