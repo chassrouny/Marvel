@@ -39,6 +39,7 @@
 		83BAB60C2AC0797F00B3A53C /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB60B2AC0797F00B3A53C /* ActivityIndicator.swift */; };
 		83BAB60F2AC07A1D00B3A53C /* LoadMoreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB60D2AC07A1D00B3A53C /* LoadMoreTableCell.swift */; };
 		83BAB6102AC07A1D00B3A53C /* LoadMoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BAB60E2AC07A1D00B3A53C /* LoadMoreTableCell.xib */; };
+		83BAB6122AC080C300B3A53C /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB6112AC080C300B3A53C /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		83BAB60B2AC0797F00B3A53C /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		83BAB60D2AC07A1D00B3A53C /* LoadMoreTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreTableCell.swift; sourceTree = "<group>"; };
 		83BAB60E2AC07A1D00B3A53C /* LoadMoreTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreTableCell.xib; sourceTree = "<group>"; };
+		83BAB6112AC080C300B3A53C /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				83BAB5D62AC020A200B3A53C /* StringExtension.swift */,
 				83BAB5D82AC020E100B3A53C /* DateExtension.swift */,
+				83BAB6112AC080C300B3A53C /* ViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				83BAB5DC2AC03B9700B3A53C /* MarvelResponse.swift in Sources */,
 				83BAB5F02AC0423000B3A53C /* MarvelCharactersRepository.swift in Sources */,
 				83BAB5D12AC01F8100B3A53C /* APIConfiguration.swift in Sources */,
+				83BAB6122AC080C300B3A53C /* ViewExtension.swift in Sources */,
 				83BAB5EE2AC03FEB00B3A53C /* ThumbnailDTO.swift in Sources */,
 				83627CEA2AC01A2000359317 /* SceneDelegate.swift in Sources */,
 				83BAB60F2AC07A1D00B3A53C /* LoadMoreTableCell.swift in Sources */,

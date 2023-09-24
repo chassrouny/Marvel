@@ -19,6 +19,7 @@ class MarvelCharacterTableCell: UITableViewCell {
         
         titleLbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         thumbnailImgView.contentMode = .scaleAspectFit
+        thumbnailImgView.cornerRadius = 4.0
     }
     
     func setup(title: String?, thumbnailUrl: String?) {
