@@ -7,9 +7,7 @@
 
 import Foundation
 
-class MarvelCharactersRepository {
-    private let networkManager = NetworkManager.shared
-    private let realmManager = RealmManager.shared
+class MarvelCharactersRepository: BaseRepository {
     
     func getCharacters(offset: Int, limit: Int = 20) async -> MarvelResponse<MarvelCharacterDTO>? {
         do {

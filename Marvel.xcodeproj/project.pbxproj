@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830456D82AC0859700EAD1BB /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830456D72AC0859700EAD1BB /* BaseRepository.swift */; };
 		831E71862AC01BD70046142D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 831E71852AC01BD70046142D /* Alamofire */; };
 		831E71892AC01C1F0046142D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 831E71882AC01C1F0046142D /* Kingfisher */; };
 		831E718C2AC01C8B0046142D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 831E718B2AC01C8B0046142D /* Realm */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830456D72AC0859700EAD1BB /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		83627CE42AC01A2000359317 /* Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83627CE72AC01A2000359317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83627CE92AC01A2000359317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		830456D62AC0857600EAD1BB /* MarvelCharacterDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MarvelCharacterDetails;
+			sourceTree = "<group>";
+		};
 		831E71922AC01D150046142D /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				83BAB5E42AC03DE000B3A53C /* MarvelCharacters */,
+				830456D62AC0857600EAD1BB /* MarvelCharacterDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -237,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				83BAB5EC2AC03FDF00B3A53C /* DTOs */,
+				830456D72AC0859700EAD1BB /* BaseRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -399,6 +410,7 @@
 				83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */,
 				83BAB5DC2AC03B9700B3A53C /* MarvelResponse.swift in Sources */,
 				83BAB5F02AC0423000B3A53C /* MarvelCharactersRepository.swift in Sources */,
+				830456D82AC0859700EAD1BB /* BaseRepository.swift in Sources */,
 				83BAB5D12AC01F8100B3A53C /* APIConfiguration.swift in Sources */,
 				83BAB6122AC080C300B3A53C /* ViewExtension.swift in Sources */,
 				83BAB5EE2AC03FEB00B3A53C /* ThumbnailDTO.swift in Sources */,
