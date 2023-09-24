@@ -20,6 +20,7 @@
 		83627CF42AC01A2100359317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83627CF22AC01A2100359317 /* LaunchScreen.storyboard */; };
 		83BAB5D12AC01F8100B3A53C /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D02AC01F8100B3A53C /* APIKeys.swift */; };
 		83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */; };
+		83BAB5D72AC020A200B3A53C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D62AC020A200B3A53C /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		83627CF52AC01A2100359317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BAB5D02AC01F8100B3A53C /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		83BAB5D62AC020A200B3A53C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		831E71942AC01D2B0046142D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				83BAB5D52AC0209300B3A53C /* Extension */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -129,6 +132,14 @@
 				83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		83BAB5D52AC0209300B3A53C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				83BAB5D62AC020A200B3A53C /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 			files = (
 				83627CEC2AC01A2000359317 /* ViewController.swift in Sources */,
 				83627CE82AC01A2000359317 /* AppDelegate.swift in Sources */,
+				83BAB5D72AC020A200B3A53C /* StringExtension.swift in Sources */,
 				83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */,
 				83BAB5D12AC01F8100B3A53C /* APIKeys.swift in Sources */,
 				83627CEA2AC01A2000359317 /* SceneDelegate.swift in Sources */,
