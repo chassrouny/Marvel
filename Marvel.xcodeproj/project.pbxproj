@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		831E71862AC01BD70046142D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 831E71852AC01BD70046142D /* Alamofire */; };
 		831E71892AC01C1F0046142D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 831E71882AC01C1F0046142D /* Kingfisher */; };
+		831E718C2AC01C8B0046142D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 831E718B2AC01C8B0046142D /* Realm */; };
+		831E718E2AC01C8B0046142D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 831E718D2AC01C8B0046142D /* RealmSwift */; };
 		83627CE82AC01A2000359317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83627CE72AC01A2000359317 /* AppDelegate.swift */; };
 		83627CEA2AC01A2000359317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83627CE92AC01A2000359317 /* SceneDelegate.swift */; };
 		83627CEC2AC01A2000359317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83627CEB2AC01A2000359317 /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831E718E2AC01C8B0046142D /* RealmSwift in Frameworks */,
+				831E718C2AC01C8B0046142D /* Realm in Frameworks */,
 				831E71892AC01C1F0046142D /* Kingfisher in Frameworks */,
 				831E71862AC01BD70046142D /* Alamofire in Frameworks */,
 			);
@@ -90,6 +94,8 @@
 			packageProductDependencies = (
 				831E71852AC01BD70046142D /* Alamofire */,
 				831E71882AC01C1F0046142D /* Kingfisher */,
+				831E718B2AC01C8B0046142D /* Realm */,
+				831E718D2AC01C8B0046142D /* RealmSwift */,
 			);
 			productName = Marvel;
 			productReference = 83627CE42AC01A2000359317 /* Marvel.app */;
@@ -122,6 +128,7 @@
 			packageReferences = (
 				831E71842AC01BD70046142D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				831E71872AC01C1F0046142D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				831E718A2AC01C8B0046142D /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 83627CE52AC01A2000359317 /* Products */;
 			projectDirPath = "";
@@ -389,6 +396,14 @@
 				minimumVersion = 7.9.1;
 			};
 		};
+		831E718A2AC01C8B0046142D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -401,6 +416,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 831E71872AC01C1F0046142D /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		831E718B2AC01C8B0046142D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 831E718A2AC01C8B0046142D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		831E718D2AC01C8B0046142D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 831E718A2AC01C8B0046142D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
