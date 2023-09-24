@@ -36,6 +36,7 @@
 		83BAB6052AC0539200B3A53C /* MarvelCharacters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BAB6042AC0539200B3A53C /* MarvelCharacters.storyboard */; };
 		83BAB6072AC053E400B3A53C /* MarvelCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB6062AC053E400B3A53C /* MarvelCharactersViewController.swift */; };
 		83BAB60A2AC0541700B3A53C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB6092AC0541700B3A53C /* BaseViewController.swift */; };
+		83BAB60C2AC0797F00B3A53C /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB60B2AC0797F00B3A53C /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		83BAB6042AC0539200B3A53C /* MarvelCharacters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarvelCharacters.storyboard; sourceTree = "<group>"; };
 		83BAB6062AC053E400B3A53C /* MarvelCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersViewController.swift; sourceTree = "<group>"; };
 		83BAB6092AC0541700B3A53C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		83BAB60B2AC0797F00B3A53C /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				83BAB6092AC0541700B3A53C /* BaseViewController.swift */,
+				83BAB60B2AC0797F00B3A53C /* ActivityIndicator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				83BAB5E72AC03E0F00B3A53C /* MarvelCharactersEndpoint.swift in Sources */,
 				83BAB5D92AC020E100B3A53C /* DateExtension.swift in Sources */,
 				83BAB5E32AC03C5600B3A53C /* RealmManager.swift in Sources */,
+				83BAB60C2AC0797F00B3A53C /* ActivityIndicator.swift in Sources */,
 				83BAB6072AC053E400B3A53C /* MarvelCharactersViewController.swift in Sources */,
 				83BAB60A2AC0541700B3A53C /* BaseViewController.swift in Sources */,
 				83BAB5FC2AC0465A00B3A53C /* MarvelCharactersViewModel.swift in Sources */,
