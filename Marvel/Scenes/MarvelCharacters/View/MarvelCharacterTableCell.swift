@@ -29,8 +29,7 @@ class MarvelCharacterTableCell: UITableViewCell {
         thumbnailImgView.kf.indicatorType = .activity
         if let thumbnailUrl {
             thumbnailImgView.kf.setImage(with: URL(string: thumbnailUrl),
-                                         options: [.transition(.fade(0.25)),
-                                                   .processor(DownsamplingImageProcessor(size: CGSize(width: 150, height: 150)))]
+                                         options: [.transition(.fade(0.25))]
             )
         }
     }
