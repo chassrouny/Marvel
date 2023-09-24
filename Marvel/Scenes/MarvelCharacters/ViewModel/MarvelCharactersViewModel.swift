@@ -28,7 +28,14 @@ class MarvelCharatersViewModel {
     }
     
     func fetchCharacters(isSilent: Bool) {
-        fetchCharactersFromBackend(showLoader: !isSilent)
+        if offset == 0, let cachedResults = fetchCharactersFromRealm() {
+            marvelCharacters.removeAll()
+            marvelCharacters.append(contentsOf: cachedResults)
+            self.delegate?.didFetchCharacters()
+            fetchCharactersFromBackend(showLoader: false)
+        } else {
+            fetchCharactersFromBackend(showLoader: !isSilent)
+        }
     }
     
     private func fetchCharactersFromBackend(showLoader: Bool) {
@@ -47,10 +54,10 @@ class MarvelCharatersViewModel {
                         let mappedItems = mapDTOtoCharacters(array: items)
                         if offset == 0 {
                             marvelCharacters.removeAll()
-//                            DispatchQueue.main.async {
-//                                self.repository.deleteCharactersFromCache()
-//                                self.repository.saveCharactersInCache(characters: mappedObjets)
-//                            }
+                            DispatchQueue.main.async {
+                                self.repository.deleteCharactersFromCache()
+                                self.repository.saveCharactersInCache(characters: mappedItems)
+                            }
                         }
                         marvelCharacters.append(contentsOf: mappedItems)
                     }
@@ -77,6 +84,10 @@ class MarvelCharatersViewModel {
                 isLoading = false
             }
         }
+    }
+    
+    private func fetchCharactersFromRealm() -> [MarvelCharacter]? {
+        return repository.getCharactersFromCache()
     }
     
     func charcterAt(index: Int) -> MarvelCharacter {
