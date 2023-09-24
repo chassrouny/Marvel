@@ -96,8 +96,40 @@
 		830456D62AC0857600EAD1BB /* MarvelCharacterDetails */ = {
 			isa = PBXGroup;
 			children = (
+				830456D92AC0861E00EAD1BB /* Repository */,
+				830456DA2AC0862400EAD1BB /* Model */,
+				830456DB2AC0862800EAD1BB /* ViewModel */,
+				830456DC2AC0862C00EAD1BB /* View */,
 			);
 			path = MarvelCharacterDetails;
+			sourceTree = "<group>";
+		};
+		830456D92AC0861E00EAD1BB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		830456DA2AC0862400EAD1BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		830456DB2AC0862800EAD1BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		830456DC2AC0862C00EAD1BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		831E71922AC01D150046142D /* Application */ = {
