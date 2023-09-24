@@ -19,6 +19,7 @@
 		83627CF12AC01A2100359317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83627CF02AC01A2100359317 /* Assets.xcassets */; };
 		83627CF42AC01A2100359317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83627CF22AC01A2100359317 /* LaunchScreen.storyboard */; };
 		83BAB5D12AC01F8100B3A53C /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D02AC01F8100B3A53C /* APIKeys.swift */; };
+		83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		83627CF32AC01A2100359317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83627CF52AC01A2100359317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BAB5D02AC01F8100B3A53C /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		831E71952AC01D420046142D /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				83BAB5D22AC0201800B3A53C /* Network */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -118,6 +121,14 @@
 				831E71962AC01D550046142D /* Resources */,
 			);
 			path = Marvel;
+			sourceTree = "<group>";
+		};
+		83BAB5D22AC0201800B3A53C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 			files = (
 				83627CEC2AC01A2000359317 /* ViewController.swift in Sources */,
 				83627CE82AC01A2000359317 /* AppDelegate.swift in Sources */,
+				83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */,
 				83BAB5D12AC01F8100B3A53C /* APIKeys.swift in Sources */,
 				83627CEA2AC01A2000359317 /* SceneDelegate.swift in Sources */,
 			);
