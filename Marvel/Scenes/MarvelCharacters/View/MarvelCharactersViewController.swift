@@ -49,7 +49,6 @@ class MarvelCharactersViewController: BaseViewController {
     }
     
     @objc func pullToRefresh() {
-//        refreshControl.endRefreshing()
         viewModel.reset()
         viewModel.fetchCharacters(isSilent: true)
     }
