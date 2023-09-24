@@ -191,8 +191,8 @@
 		83BAB5E42AC03DE000B3A53C /* MarvelCharacters */ = {
 			isa = PBXGroup;
 			children = (
-				83BAB5F42AC0432000B3A53C /* Model */,
 				83BAB5E52AC03DF400B3A53C /* Repository */,
+				83BAB5F42AC0432000B3A53C /* Model */,
 			);
 			path = MarvelCharacters;
 			sourceTree = "<group>";
