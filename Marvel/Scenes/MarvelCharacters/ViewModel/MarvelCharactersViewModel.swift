@@ -21,8 +21,14 @@ class MarvelCharatersViewModel {
         repository = MarvelCharactersRepository()
     }
     
-    func fetchCharacters() {
-        fetchCharactersFromBackend(showLoader: offset == 0 ? true : false)
+    func reset() {
+        offset = 0
+        hasMore = false
+        isLoading = false
+    }
+    
+    func fetchCharacters(isSilent: Bool) {
+        fetchCharactersFromBackend(showLoader: !isSilent)
     }
     
     private func fetchCharactersFromBackend(showLoader: Bool) {

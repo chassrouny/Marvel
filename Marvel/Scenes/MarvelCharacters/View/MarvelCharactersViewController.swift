@@ -11,11 +11,13 @@ class MarvelCharactersViewController: BaseViewController {
     
     private var viewModel: MarvelCharatersViewModel!
     @IBOutlet weak var marvelCharactersTableView: UITableView!
+    
+    let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewModel()
-        viewModel.fetchCharacters()
+        viewModel.fetchCharacters(isSilent: false)
     }
     
     override func setupInterface() {
@@ -31,13 +33,25 @@ class MarvelCharactersViewController: BaseViewController {
         let loadMoreTableCell = UINib(nibName: "LoadMoreTableCell", bundle: nil)
         marvelCharactersTableView.register(loadMoreTableCell, forCellReuseIdentifier: "LoadMoreTableCell")
         
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh")
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+        marvelCharactersTableView.addSubview(refreshControl)
+        
+        
         marvelCharactersTableView.showsVerticalScrollIndicator = false
         marvelCharactersTableView.dataSource = self
+        
     }
     
     func setupViewModel() {
         viewModel = MarvelCharatersViewModel()
         viewModel.delegate = self
+    }
+    
+    @objc func pullToRefresh() {
+//        refreshControl.endRefreshing()
+        viewModel.reset()
+        viewModel.fetchCharacters(isSilent: true)
     }
 }
 
@@ -52,6 +66,7 @@ extension MarvelCharactersViewController: MarvelCharactersViewModelProtocol {
     
     func didFetchCharacters() {
         marvelCharactersTableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     func didFailToFetchCharacters() {
@@ -84,7 +99,7 @@ extension MarvelCharactersViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LoadMoreTableCell") as! LoadMoreTableCell
             cell.startLoading()
             cell.selectionStyle = .none
-            viewModel.fetchCharacters()
+            viewModel.fetchCharacters(isSilent: true)
             return cell
         }
     }
