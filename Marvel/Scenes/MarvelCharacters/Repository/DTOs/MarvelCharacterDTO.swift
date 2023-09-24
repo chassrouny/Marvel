@@ -28,7 +28,7 @@ extension MarvelCharacterDTO {
         let marvelCharacter = MarvelCharacter()
         marvelCharacter.id = id
         marvelCharacter.name = name
-        var thumb = Thumbnail()
+        let thumb = Thumbnail()
         thumb.path = thumbnail?.path
         thumb.extension = thumbnail?.extension
         marvelCharacter.thumbnail = thumb
