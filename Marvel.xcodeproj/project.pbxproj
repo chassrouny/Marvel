@@ -27,6 +27,8 @@
 		83BAB5E02AC03BD100B3A53C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5DF2AC03BD100B3A53C /* NetworkManager.swift */; };
 		83BAB5E32AC03C5600B3A53C /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5E22AC03C5600B3A53C /* RealmManager.swift */; };
 		83BAB5E72AC03E0F00B3A53C /* MarvelCharactersEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5E62AC03E0F00B3A53C /* MarvelCharactersEndpoint.swift */; };
+		83BAB5E92AC03FA200B3A53C /* MarvelCharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5E82AC03FA200B3A53C /* MarvelCharacterDTO.swift */; };
+		83BAB5EE2AC03FEB00B3A53C /* ThumbnailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5ED2AC03FEB00B3A53C /* ThumbnailDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		83BAB5DF2AC03BD100B3A53C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		83BAB5E22AC03C5600B3A53C /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		83BAB5E62AC03E0F00B3A53C /* MarvelCharactersEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersEndpoint.swift; sourceTree = "<group>"; };
+		83BAB5E82AC03FA200B3A53C /* MarvelCharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterDTO.swift; sourceTree = "<group>"; };
+		83BAB5ED2AC03FEB00B3A53C /* ThumbnailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		831E71942AC01D2B0046142D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				83BAB5EB2AC03FD700B3A53C /* Repository */,
 				83BAB5D52AC0209300B3A53C /* Extension */,
 			);
 			path = Common;
@@ -187,9 +192,34 @@
 		83BAB5E52AC03DF400B3A53C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				83BAB5EA2AC03FA400B3A53C /* DTOs */,
 				83BAB5E62AC03E0F00B3A53C /* MarvelCharactersEndpoint.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		83BAB5EA2AC03FA400B3A53C /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				83BAB5E82AC03FA200B3A53C /* MarvelCharacterDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		83BAB5EB2AC03FD700B3A53C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				83BAB5EC2AC03FDF00B3A53C /* DTOs */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		83BAB5EC2AC03FDF00B3A53C /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				83BAB5ED2AC03FEB00B3A53C /* ThumbnailDTO.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,12 +311,14 @@
 				83BAB5D92AC020E100B3A53C /* DateExtension.swift in Sources */,
 				83BAB5E32AC03C5600B3A53C /* RealmManager.swift in Sources */,
 				83BAB5E02AC03BD100B3A53C /* NetworkManager.swift in Sources */,
+				83BAB5E92AC03FA200B3A53C /* MarvelCharacterDTO.swift in Sources */,
 				83627CE82AC01A2000359317 /* AppDelegate.swift in Sources */,
 				83BAB5DE2AC03BAF00B3A53C /* MarvelResponseData.swift in Sources */,
 				83BAB5D72AC020A200B3A53C /* StringExtension.swift in Sources */,
 				83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */,
 				83BAB5DC2AC03B9700B3A53C /* MarvelResponse.swift in Sources */,
 				83BAB5D12AC01F8100B3A53C /* APIConfiguration.swift in Sources */,
+				83BAB5EE2AC03FEB00B3A53C /* ThumbnailDTO.swift in Sources */,
 				83627CEA2AC01A2000359317 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
