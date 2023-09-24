@@ -10,7 +10,7 @@ import Alamofire
 
 struct MarvelCharactersEndpoint: EndpointProtocol {
     var baseUrl: String {
-        return "https://gateway.marvel.com/v1/public"
+        return APIConfiguration().baseUrl
     }
     
     var api: String {
