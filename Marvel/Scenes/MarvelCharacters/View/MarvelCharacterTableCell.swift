@@ -17,8 +17,7 @@ class MarvelCharacterTableCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        titleLbl.textColor = .black
-        titleLbl.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        titleLbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         thumbnailImgView.contentMode = .scaleAspectFit
     }
     
