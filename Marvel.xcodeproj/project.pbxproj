@@ -18,7 +18,7 @@
 		83627CEF2AC01A2000359317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83627CED2AC01A2000359317 /* Main.storyboard */; };
 		83627CF12AC01A2100359317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83627CF02AC01A2100359317 /* Assets.xcassets */; };
 		83627CF42AC01A2100359317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83627CF22AC01A2100359317 /* LaunchScreen.storyboard */; };
-		83BAB5D12AC01F8100B3A53C /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D02AC01F8100B3A53C /* APIKeys.swift */; };
+		83BAB5D12AC01F8100B3A53C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D02AC01F8100B3A53C /* APIConfiguration.swift */; };
 		83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */; };
 		83BAB5D72AC020A200B3A53C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D62AC020A200B3A53C /* StringExtension.swift */; };
 		83BAB5D92AC020E100B3A53C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAB5D82AC020E100B3A53C /* DateExtension.swift */; };
@@ -38,7 +38,7 @@
 		83627CF02AC01A2100359317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83627CF32AC01A2100359317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83627CF52AC01A2100359317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83BAB5D02AC01F8100B3A53C /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		83BAB5D02AC01F8100B3A53C /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		83BAB5D32AC0202400B3A53C /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		83BAB5D62AC020A200B3A53C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		83BAB5D82AC020E100B3A53C /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 			children = (
 				83627CE72AC01A2000359317 /* AppDelegate.swift */,
 				83627CE92AC01A2000359317 /* SceneDelegate.swift */,
-				83BAB5D02AC01F8100B3A53C /* APIKeys.swift */,
+				83BAB5D02AC01F8100B3A53C /* APIConfiguration.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 				83BAB5D72AC020A200B3A53C /* StringExtension.swift in Sources */,
 				83BAB5D42AC0202400B3A53C /* EndpointProtocol.swift in Sources */,
 				83BAB5DC2AC03B9700B3A53C /* MarvelResponse.swift in Sources */,
-				83BAB5D12AC01F8100B3A53C /* APIKeys.swift in Sources */,
+				83BAB5D12AC01F8100B3A53C /* APIConfiguration.swift in Sources */,
 				83627CEA2AC01A2000359317 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

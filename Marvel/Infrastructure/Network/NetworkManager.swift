@@ -42,7 +42,7 @@ actor NetworkManager: GlobalActor {
     private func generateParameters(parameters: [String: Any]?) -> [String: Any] {
         var params = [String: Any]()
         let ts = Date().currentTimeMillis()
-        let apiKeys = APIKeys()
+        let apiKeys = APIConfiguration()
         params["ts"] = ts
         params["hash"] = (String(ts) + apiKeys.privateKey + apiKeys.publicKey).MD5()
         params["apikey"] = apiKeys.publicKey
