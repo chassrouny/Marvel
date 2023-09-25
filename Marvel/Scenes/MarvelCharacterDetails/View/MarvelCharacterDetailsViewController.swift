@@ -34,20 +34,11 @@ class MarvelCharacterDetailsViewController: BaseViewController {
     }
     
     func setupCollectionView() {
-        let headerCell = UINib(nibName: "HeaderCollectionCell", bundle: .main)
-        collectionView.register(headerCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionCell")
-        
-        let imageTitleCell = UINib(nibName: "ImageTitleCollectionCell", bundle: .main)
-        collectionView.register(imageTitleCell, forCellWithReuseIdentifier: "ImageTitleCollectionCell")
-        
-        let titleCell = UINib(nibName: "TitleCollectionCell", bundle: .main)
-        collectionView.register(titleCell, forCellWithReuseIdentifier: "TitleCollectionCell")
-        
-        let emptyCell = UINib(nibName: "EmptyCollectionCell", bundle: .main)
-        collectionView.register(emptyCell, forCellWithReuseIdentifier: "EmptyCollectionCell")
-        
-        let loadingCell = UINib(nibName: "LoadingCollectionCell", bundle: .main)
-        collectionView.register(loadingCell, forCellWithReuseIdentifier: "LoadingCollectionCell")
+        collectionView.register(HeaderCollectionCell.nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionCell.identifier)
+        collectionView.register(ImageTitleCollectionCell.nib, forCellWithReuseIdentifier: ImageTitleCollectionCell.identifier)
+        collectionView.register(TitleCollectionCell.nib, forCellWithReuseIdentifier: TitleCollectionCell.identifier)
+        collectionView.register(EmptyCollectionCell.nib, forCellWithReuseIdentifier: EmptyCollectionCell.identifier)
+        collectionView.register(LoadingCollectionCell.nib, forCellWithReuseIdentifier: LoadingCollectionCell.identifier)
         
         collectionView.showsVerticalScrollIndicator = false
         collectionView.setCollectionViewLayout(compositionalLayout(), animated: true)
@@ -107,11 +98,11 @@ extension MarvelCharacterDetailsViewController: UICollectionViewDelegate, UIColl
         let section = viewModel.sectionAt(index: indexPath.section)
         switch section.state {
         case .loading:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LoadingCollectionCell", for: indexPath) as! LoadingCollectionCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LoadingCollectionCell.identifier, for: indexPath) as! LoadingCollectionCell
             cell.setup()
             return cell
         case .empty, .failed:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmptyCollectionCell", for: indexPath) as! EmptyCollectionCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmptyCollectionCell.identifier, for: indexPath) as! EmptyCollectionCell
             cell.setup(text: section.state == .empty ? "No \(section.title) Available" : "Failed To Load \(section.title)")
             return cell
         case .loaded:
@@ -133,11 +124,11 @@ extension MarvelCharacterDetailsViewController: UICollectionViewDelegate, UIColl
             case .stories:
                 let story = viewModel.storyAt(index: indexPath.item)
                 title = story.title
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCollectionCell", for: indexPath) as! TitleCollectionCell
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionCell.identifier, for: indexPath) as! TitleCollectionCell
                 cell.setup(title: title)
                 return cell
             }
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageTitleCollectionCell", for: indexPath) as! ImageTitleCollectionCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageTitleCollectionCell.identifier, for: indexPath) as! ImageTitleCollectionCell
             cell.setup(title: title, imageUrl: imageUrl)
             return cell
         }
@@ -145,7 +136,7 @@ extension MarvelCharacterDetailsViewController: UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let section = viewModel.sectionAt(index: indexPath.section)
-        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCollectionCell", for: indexPath) as! HeaderCollectionCell
+        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderCollectionCell.identifier, for: indexPath) as! HeaderCollectionCell
         cell.setup(title: section.title)
         return cell
     }

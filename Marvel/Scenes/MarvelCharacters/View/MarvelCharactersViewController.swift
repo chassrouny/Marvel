@@ -27,11 +27,8 @@ class MarvelCharactersViewController: BaseViewController {
     }
     
     func setupTableView() {
-        let marvelCharacterTableCell = UINib(nibName: "MarvelCharacterTableCell", bundle: .main)
-        marvelCharactersTableView.register(marvelCharacterTableCell, forCellReuseIdentifier: "MarvelCharacterTableCell")
-        
-        let loadMoreTableCell = UINib(nibName: "LoadMoreTableCell", bundle: .main)
-        marvelCharactersTableView.register(loadMoreTableCell, forCellReuseIdentifier: "LoadMoreTableCell")
+        marvelCharactersTableView.register(MarvelCharacterTableCell.nib, forCellReuseIdentifier: MarvelCharacterTableCell.identifier)
+        marvelCharactersTableView.register(LoadMoreTableCell.nib, forCellReuseIdentifier: LoadMoreTableCell.identifier)
         
         refreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh")
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
@@ -91,12 +88,12 @@ extension MarvelCharactersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let character = viewModel.charcterAt(index: indexPath.row)
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MarvelCharacterTableCell") as! MarvelCharacterTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MarvelCharacterTableCell.identifier) as! MarvelCharacterTableCell
             cell.setup(title: character.name, thumbnailUrl: character.thumbnail?.getUrl(size: .standard_medium))
             cell.selectionStyle = .none
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LoadMoreTableCell") as! LoadMoreTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: LoadMoreTableCell.identifier) as! LoadMoreTableCell
             cell.startLoading()
             cell.selectionStyle = .none
             viewModel.fetchCharacters(isSilent: true)

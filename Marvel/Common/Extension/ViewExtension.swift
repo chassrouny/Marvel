@@ -18,4 +18,8 @@ extension UIView {
             self.layer.cornerRadius = newValue
         }
     }
+    
+    class var identifier: String { return String(describing: self) }
+    class var nib: UINib { return UINib(nibName: identifier, bundle: .main) }
+
 }
