@@ -13,10 +13,17 @@ class MarvelCharacterDetailsViewModel {
     
     private let characterId: Int
     
-    var comics: [MarvelComic] = []
-    var events: [MarvelEvent] = []
-    var series: [MarvelSeries] = []
-    var stories: [MarvelStory] = []
+    private var sections: [MarvelDetail] = [
+        MarvelDetail(type: .comics, title: "Comics", state: .loading),
+        MarvelDetail(type: .events, title: "Events", state: .loading),
+        MarvelDetail(type: .series, title: "Series", state: .loading),
+        MarvelDetail(type: .stories, title: "Stories", state: .loading)
+    ]
+    
+    private var comics: [MarvelComic] = []
+    private var events: [MarvelEvent] = []
+    private var series: [MarvelSeries] = []
+    private var stories: [MarvelStory] = []
     
     required init(characterId: Int) {
         self.characterId = characterId
@@ -24,6 +31,10 @@ class MarvelCharacterDetailsViewModel {
     }
     
     func reset() {
+        for section in sections {
+            section.state = .loading
+        }
+        
         comics.removeAll()
         events.removeAll()
         series.removeAll()
@@ -39,76 +50,76 @@ class MarvelCharacterDetailsViewModel {
     
     private func fetchComics() {
         Task {
+            let section = sections[0]
             if let comicsResponse = await repository.getComics(characterId: characterId) {
                 if let its = comicsResponse.data.results, its.count > 0 {
                     let mappedComics = its.map { dto in return dto.toDomain()}
                     comics.removeAll()
                     comics.append(contentsOf: mappedComics)
                 }
-                DispatchQueue.main.async {
-                    self.delegate?.didFetchComics()
-                }
+                section.state = comics.count == 0 ? .empty : .loaded
             } else {
-                DispatchQueue.main.async {
-                    self.delegate?.didFailToFetchComics()
-                }
+                section.state = .failed
+            }
+            DispatchQueue.main.async {
+                self.delegate?.didChangeData()
             }
         }
     }
     
     private func fetchEvents() {
         Task {
+            let section = sections[1]
             if let eventsReponse = await repository.getEvents(characterId: characterId) {
                 if let its = eventsReponse.data.results, its.count > 0 {
                     let mappedEvents = its.map { dto in return dto.toDomain()}
                     events.removeAll()
                     events.append(contentsOf: mappedEvents)
                 }
-                DispatchQueue.main.async {
-                    self.delegate?.didFetchEvents()
-                }
+                section.state = events.count == 0 ? .empty : .loaded
             } else {
-                DispatchQueue.main.async {
-                    self.delegate?.didFailToFetchEvents()
-                }
+                section.state = .failed
+            }
+            DispatchQueue.main.async {
+                self.delegate?.didChangeData()
             }
         }
     }
     
     private func fetchSeries() {
         Task {
+            let section = sections[2]
             if let seriesResponse = await repository.getSeries(characterId: characterId) {
                 if let its = seriesResponse.data.results, its.count > 0 {
                     let mappedSeries = its.map { dto in return dto.toDomain()}
                     series.removeAll()
                     series.append(contentsOf: mappedSeries)
                 }
-                DispatchQueue.main.async {
-                    self.delegate?.didFetchSeries()
-                }
+                section.state = series.count == 0 ? .empty : .loaded
             } else {
-                DispatchQueue.main.async {
-                    self.delegate?.didFailToFetchSeries()
-                }
+                section.state = .failed
+            }
+            DispatchQueue.main.async {
+                self.delegate?.didChangeData()
             }
         }
     }
     
     private func fetchStories() {
         Task {
+            let section = sections[3]
             if let storiesResponse = await repository.getStories(characterId: characterId) {
                 if let its = storiesResponse.data.results, its.count > 0 {
                     let mappedStories = its.map { dto in return dto.toDomain()}
                     stories.removeAll()
                     stories.append(contentsOf: mappedStories)
                 }
-                DispatchQueue.main.async {
-                    self.delegate?.didFetchStories()
-                }
+                section.state = stories.count == 0 ? .empty : .loaded
             } else {
-                DispatchQueue.main.async {
-                    self.delegate?.didFailToFetchStories()
-                }
+                section.state = .failed
+            }
+            DispatchQueue.main.async {
+                self.delegate?.didChangeData()
             }
         }
     }
@@ -145,16 +156,17 @@ class MarvelCharacterDetailsViewModel {
         return stories[index]
     }
     
+    func sectionsCount() -> Int {
+        sections.count
+    }
+    
+    func sectionAt(index: Int) -> MarvelDetail {
+        return sections[index]
+    }
+    
 }
 
 protocol MarvelCharacterDetailsViewModelProtocol: AnyObject {
-    func didFetchComics()
-    func didFetchEvents()
-    func didFetchStories()
-    func didFetchSeries()
-    func didFailToFetchComics()
-    func didFailToFetchEvents()
-    func didFailToFetchStories()
-    func didFailToFetchSeries()
+    func didChangeData()
+    
 }
-

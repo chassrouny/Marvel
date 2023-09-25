@@ -27,10 +27,10 @@ class MarvelCharactersViewController: BaseViewController {
     }
     
     func setupTableView() {
-        let marvelCharacterTableCell = UINib(nibName: "MarvelCharacterTableCell", bundle: nil)
+        let marvelCharacterTableCell = UINib(nibName: "MarvelCharacterTableCell", bundle: .main)
         marvelCharactersTableView.register(marvelCharacterTableCell, forCellReuseIdentifier: "MarvelCharacterTableCell")
         
-        let loadMoreTableCell = UINib(nibName: "LoadMoreTableCell", bundle: nil)
+        let loadMoreTableCell = UINib(nibName: "LoadMoreTableCell", bundle: .main)
         marvelCharactersTableView.register(loadMoreTableCell, forCellReuseIdentifier: "LoadMoreTableCell")
         
         refreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh")
@@ -40,6 +40,7 @@ class MarvelCharactersViewController: BaseViewController {
         
         marvelCharactersTableView.showsVerticalScrollIndicator = false
         marvelCharactersTableView.dataSource = self
+        marvelCharactersTableView.delegate = self
         
     }
     
@@ -100,6 +101,16 @@ extension MarvelCharactersViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             viewModel.fetchCharacters(isSilent: true)
             return cell
+        }
+    }
+}
+
+extension MarvelCharactersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            let character = viewModel.charcterAt(index: indexPath.row)
+            let vc = MarvelCharacterDetailsRouter.characterDetailsVC(character: character)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
