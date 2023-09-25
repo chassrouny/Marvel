@@ -67,7 +67,10 @@ extension MarvelCharactersViewController: MarvelCharactersViewModelProtocol {
     }
     
     func didFailToFetchCharacters() {
-        #warning("Show Popup")
+        let alert = UIAlertController(title: "Fail", message: "Error Loading Characters", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
 }
 
