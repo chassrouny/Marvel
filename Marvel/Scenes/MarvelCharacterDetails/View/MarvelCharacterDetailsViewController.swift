@@ -29,10 +29,6 @@ class MarvelCharacterDetailsViewController: BaseViewController {
         setupCollectionView()
     }
     
-    deinit {
-        debugPrint("DEINIT")
-    }
-    
     func setupCollectionView() {
         collectionView.register(HeaderCollectionCell.nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionCell.identifier)
         collectionView.register(ImageTitleCollectionCell.nib, forCellWithReuseIdentifier: ImageTitleCollectionCell.identifier)

@@ -14,5 +14,9 @@ class BaseViewController: UIViewController {
         setupInterface()
     }
     
+    deinit {
+        print("DEINIT: \(String(describing: self))")
+    }
+    
     func setupInterface() {}
 }
